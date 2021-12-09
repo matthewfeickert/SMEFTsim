@@ -25,7 +25,7 @@ class UFOBaseClass:
         for i, name in enumerate(self.require_args):
             setattr(self, name, args[i])
     
-        for (option, value) in list(options.items()):
+        for (option, value) in options.items():
             setattr(self, option, value)
 
     def get(self, name):
@@ -43,7 +43,7 @@ class UFOBaseClass:
 
     def nice_string(self):
         """ return string with the full information """
-        return '\n'.join(['%s \t: %s' %(name, value) for name, value in list(self.__dict__.items())])
+        return '\n'.join(['%s \t: %s' %(name, value) for name, value in self.__dict__.items()])
 
     def __repr__(self):
         replacements = [
