@@ -252,7 +252,7 @@ class Coupling(UFOBaseClass):
         parameter or just a string which can possibly contain CTparameter defining the Laurent serie."""
         
         if isinstance(self.value,dict):
-            if -x in list(self.value.keys()):
+            if -x in self.value.keys():
                 return self.value[-x]
             else:
                 return 'ZERO'
